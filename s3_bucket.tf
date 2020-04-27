@@ -1,12 +1,12 @@
-resource "aws_s3_bucket" "bucket-azymberdi" {
-bucket = "my-bucket-azymberdi"  #bucket name has to be unique
-acl    = "private"
+# resource "aws_s3_bucket" "bucket-azymberdi" {
+# bucket = "my-bucket-azymberdi"  #bucket name has to be unique
+# acl    = "private"
 
-tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-}
-}
+# tags = {
+#     Name        = "My bucket"
+#     Environment = "Dev"
+# }
+# }
 
 
 # If you need to add more buckets
