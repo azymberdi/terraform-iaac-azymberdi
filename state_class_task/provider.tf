@@ -3,7 +3,3 @@ provider "aws" {
   version = "2.59"
 }
 
-
-
-
-  
