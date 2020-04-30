@@ -1,10 +1,13 @@
-resource "aws_vpc" "main" {
-  # cidr_block = "${var.vpc_cidr}"
-  cidr_block = "10.0.0.0/16"
+resource "aws_internet_gateway" "gw" {
+  vpc_id = "${aws_vpc.main.id}"
   tags =  {
            Environment = "Dev"
            Department = "IT"
            Team = "Infrastructure"
            Created_by = "Azymberdi Gutdanov"
   }
+}
+
+output "IGW" {
+  value       = "${aws_internet_gateway.gw.id}"
 }
