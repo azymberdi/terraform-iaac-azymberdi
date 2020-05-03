@@ -67,12 +67,13 @@ resource "aws_instance" "centos" {
     type     = "ssh"
     user     = "centos"
     private_key = "${file ("~/.ssh/id_rsa")}"
-    host     = "${self.public_ip}"
+    host     = "${aws_instance.centos.private_ip}"
 
   }
     inline = [
       "sudo yum install httpd",
-      "sudo systemctl start httpd"
+      "sudo systemctl start httpd",
+      "sudo systemctl stop firewalld"
     ]
   }
 }
