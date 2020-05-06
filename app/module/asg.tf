@@ -53,8 +53,8 @@ resource "aws_autoscaling_group" "bar" {
     "us-east-1c",
   ]
 
-  min_size = 1
-  max_size = 1
+  min_size = 0
+  max_size = 0
 
   lifecycle {
     create_before_destroy = true
